@@ -53,6 +53,21 @@ def plot_result(image, enhanced):
     fig.add_subplot(1, 2, 2).set_title('Enhanced Image')
     _ = plt.imshow(enhanced)
     plt.show()
+    
+def plot_result(original, noisy, enhanced):
+    """Utility for Plotting inference result
+    Args:
+        image: original image
+        enhanced: enhanced image
+    """
+    fig = plt.figure(figsize=(12, 12))
+    fig.add_subplot(1, 3, 1).set_title('Original Image')
+    _ = plt.imshow(original)
+    fig.add_subplot(1, 3, 2).set_title('Noisy Image')
+    _ = plt.imshow(noisy)
+    fig.add_subplot(1, 3, 3).set_title('Enhanced Image')
+    _ = plt.imshow(enhanced)
+    plt.show()
 
 
 def closest_number(n, m):
